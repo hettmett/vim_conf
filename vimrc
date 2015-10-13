@@ -12,6 +12,11 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'klen/python-mode'
 Bundle 'davidhalter/jedi-vim'
+Bundle 'sjl/gundo.vim'
+Bundle 'kien/ctrlp.vim'
+Bundle 'jlanzarotta/bufexplorer'
+Bundle 'fholgado/minibufexpl.vim'
+Bundle 'bling/vim-airline'
 
 filetype plugin indent on
 
@@ -24,6 +29,13 @@ set hidden
 set wildmenu
 set showcmd
 set hlsearch
+
+" Highlight current line
+set cursorline
+
+" Faster redraw
+set ttyfast
+set lazyredraw
 
 " Use case insensitive search, except when using capital letters
 set ignorecase
@@ -104,6 +116,9 @@ nmap <F4> /<C-R><C-W><CR>
 nmap <F6> :NERDTreeToggle<CR>
 "nmap <F7> :TlistToggle<CR>
 
+" Buffer Explorer
+nmap <F8> :BufExplorer<CR>
+
 " paste
 nmap <C-V> "+p
 vmap <C-V> "+p
@@ -117,16 +132,27 @@ vmap <C-C> "+y
 nmap <silent> <C-S-PageDown> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nmap <silent> <C-S-PageUp> :execute 'silent! tabmove ' . tabpagenr()<CR>
 
+" Change the leader to comma
+let mapleader=","
+nnoremap <leader>u :GundoToggle<CR>
+
 " Use <leader>l to toggle display of whitespace
 nmap <leader>l :set list!<CR>
 
 " automatically change window's cwd to file's dir
 " set autochdir
 
-" I'm prefer spaces to tabs
-set tabstop=4
+" I prefer spaces to tabs
+set tabstop=4           " 4 space tab
+set expandtab           " use spaces for tabs
+set softtabstop=4       " 4 space tab
 set shiftwidth=4
-set expandtab
+set modelines=1
+
+" Folding is fun
+set foldmethod=indent
+set foldnestmax=2
+set foldenable
 
 " Python-mode
 " Activate rope
@@ -168,3 +194,16 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
 " Don't autofold code
 let g:pymode_folding = 0
+
+" CtrlP settings
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+
+" MiniBufExplr
+nmap <C-j> :MBEbp<CR>
+nmap <C-k> :MBEbn<CR>
+
+" vim-airline
+" let g:airline_powerline_fonts = 1
