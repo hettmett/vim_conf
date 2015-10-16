@@ -142,6 +142,11 @@ nmap <leader>l :set list!<CR>
 " automatically change window's cwd to file's dir
 " set autochdir
 
+" Change working files dirs to home .vim folder 
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
+
 " I prefer spaces to tabs
 set tabstop=4           " 4 space tab
 set expandtab           " use spaces for tabs
