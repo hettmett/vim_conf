@@ -15,7 +15,6 @@ Bundle 'davidhalter/jedi-vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jlanzarotta/bufexplorer'
-Bundle 'fholgado/minibufexpl.vim'
 Bundle 'bling/vim-airline'
 
 filetype plugin indent on
