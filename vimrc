@@ -205,9 +205,5 @@ let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
-" MiniBufExplr
-nmap <C-j> :MBEbp<CR>
-nmap <C-k> :MBEbn<CR>
-
 " vim-airline
 " let g:airline_powerline_fonts = 1
