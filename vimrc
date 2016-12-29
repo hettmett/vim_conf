@@ -16,13 +16,22 @@ Bundle 'sjl/gundo.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jlanzarotta/bufexplorer'
 Bundle 'bling/vim-airline'
+Bundle 'heavenshell/vim-pydocstring'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
+Bundle 'mileszs/ack.vim'
+Bundle 'easymotion/vim-easymotion'
 
 filetype plugin indent on
 
 " The rest of your config follows here
 syntax on
 
-colorscheme quagmire
+colorscheme nofrils-dark
+" colorscheme quagmire
 
 set hidden
 set wildmenu
@@ -207,3 +216,8 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 " vim-airline
 " let g:airline_powerline_fonts = 1
+
+" Ack related
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
