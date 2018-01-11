@@ -15,7 +15,7 @@ Bundle 'davidhalter/jedi-vim'
 Bundle 'sjl/gundo.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'jlanzarotta/bufexplorer'
-Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline'
 Bundle 'heavenshell/vim-pydocstring'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'MarcWeber/vim-addon-mw-utils'
@@ -182,6 +182,8 @@ set foldenable
 " ]M            Jump on next class or method (normal, visual, operator modes)
 let g:pymode_rope = 0
 
+let g:pymode_python = 'python3'
+
 " Documentation
 let g:pymode_doc = 1
 let g:pymode_doc_key = 'K'
@@ -189,8 +191,9 @@ let g:pymode_doc_key = 'K'
 "Linting
 let g:pymode_lint = 1
 let g:pymode_lint_checker = "pyflakes,pep8"
+
 " Auto check on save
-let g:pymode_lint_write = 1
+let g:pymode_lint_unmodified = 1
 
 " Support virtualenv
 let g:pymode_virtualenv = 1
@@ -221,3 +224,9 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+" do silversearch (ag) with the word under cursor
+nmap <F3> :Ack <cword><CR>
+
+" replace word under cursor
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
