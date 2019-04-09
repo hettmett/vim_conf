@@ -53,3 +53,5 @@ let g:pymode_syntax_space_errors = g:pymode_syntax_all
 
 " Don't autofold code
 let g:pymode_folding = 0
+
+let g:pydocstring_templates_dir = $HOME."/.vim/pydoc_templates"
