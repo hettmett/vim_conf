@@ -24,6 +24,8 @@ set softtabstop=4       " 4 space tab
 set shiftwidth=4
 set modelines=1
 
+autocmd Filetype javascript setlocal ts=2 sw=2 sts=0
+
 " Folding is fun
 set foldmethod=indent
 set foldnestmax=2
