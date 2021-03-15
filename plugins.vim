@@ -17,7 +17,6 @@ Plug 'heavenshell/vim-pydocstring', { 'do': 'make install' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
-Plug 'honza/vim-snippets'
 Plug 'mileszs/ack.vim'
 Plug 'easymotion/vim-easymotion'
 
