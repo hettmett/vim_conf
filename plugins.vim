@@ -8,7 +8,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
 Plug 'scrooloose/nerdtree'
-Plug 'davidhalter/jedi-vim'
 Plug 'sjl/gundo.vim'
 Plug 'kien/ctrlp.vim'
 Plug 'jlanzarotta/bufexplorer'
