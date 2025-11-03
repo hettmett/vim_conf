@@ -9,8 +9,8 @@ let g:nerdtree_tabs_autoclose=0
 " let g:airline#extensions#tabline#enabled = 1
 
 let g:ctrlp_custom_ignore = {
-\ 'dir':  '\v([\/]\(.(git|hg|svn)|nimcache)$',
-\ 'file': '\v\.(exe|so|dll|ilk|exp|pdb|obj|lib)$',
+\ 'dir':  '\v([\/]\(.(git|hg|svn)|nimcache\|fs\)$',
+\ 'file': '\v\.(exe|so|dll|ilk|exp|pdb|obj|lib|pyc|log|po|pot)$',
 \ }
 
 
